@@ -1,0 +1,14 @@
+.main-app__body {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 1rem;
+    padding: 1.5rem;
+    & .filters, .candidates {
+        background: #fff;
+    }
+    .candidates {
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    
+}

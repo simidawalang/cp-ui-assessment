@@ -1,0 +1,60 @@
+.candidate-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  & .candidate-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  & .candidate-initials {
+    color: #d0e1ff;
+    font-size: 20px;
+    font-weight: 600;
+    background: #edf4ff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  & .location {
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  & .education {
+    font-size: 10px;
+    margin-bottom: 0.5rem;
+  }
+
+  & .hashtags {
+    color: #1d4ed8;
+    font-size: 8px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 8px;
+  }
+  & .pill-container {
+    font-size: 8px;
+    font-weight: 500;
+    display: flex;
+    gap: 8px;
+  }
+  & .pill {
+    color: #037092;
+    background: #f3fafc;
+    border-radius: 1rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
