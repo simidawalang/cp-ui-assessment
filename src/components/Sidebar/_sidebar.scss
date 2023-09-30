@@ -1,0 +1,40 @@
+.sidebar {
+  padding: 2rem 1rem;
+  background: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  & .blank-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    margin-bottom: 2rem;
+  }
+
+  & .sidebar-icon {
+    border-radius: 8px;
+    display: block;
+    padding: 0.75rem;
+    &:not(:last-child) {
+      margin-bottom: 0.7rem;
+    }
+    &.active {
+      background: #e9efff;
+    }
+  }
+  & .initials {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #b1cdfd;
+    background: #d7e5fd;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,10 @@
+@import "./components/Layout/layout";
+@import "./components/Sidebar/sidebar";
+@import "./components/Header/header";
+@import "./components/MainApp/main-app";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

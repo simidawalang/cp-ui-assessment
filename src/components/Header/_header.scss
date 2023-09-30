@@ -1,0 +1,13 @@
+.header {
+  padding: 1.5rem;
+  & .heading-text {
+    color: #1d4ed8;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  & .city {
+    font-size: 0.75rem;
+  }
+}
