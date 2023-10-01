@@ -29,7 +29,9 @@ const MainApp = () => {
     const newList = candidates.filter(
       (c) =>
         c.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-        c.location.toLowerCase().includes(searchValue.toLowerCase())
+        c.location.toLowerCase().includes(searchValue.toLowerCase()) ||
+        c.education.toLowerCase().includes(searchValue.toLowerCase()) ||
+        c.hashtags.includes(searchValue)
     );
     setFilteredCandidates(newList);
   }, [searchValue]);
@@ -60,7 +62,22 @@ const MainApp = () => {
         </div>
       </div>
       <div className="candidates">
-        candidates
+        <div className="candidate-header">
+          <div className="candidate-count">
+            <input type="checkbox" />
+            <span >247 Candidates</span>
+          </div>
+
+          <div className="candidate-categories">
+            <div className="candidate-category active">Qualified</div>
+            <div className="candidate-category">
+              Task <span className="count">25</span>
+            </div>
+            <div className="candidate-category">
+              Disqualified <span className="count">78</span>
+            </div>
+          </div>
+        </div>
         {filteredCandidates.length !== 0 ? (
           filteredCandidates.map((c) => (
             <CandidateCard key={c.id} candidate={c} />

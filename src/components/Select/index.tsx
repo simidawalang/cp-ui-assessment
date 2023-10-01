@@ -19,7 +19,7 @@ const Select = ({
       className="select"
       onClick={(e) => {
         e.stopPropagation();
-        setShowOptions(true);
+        setShowOptions((prev) => !prev);
       }}
     >
       <div className="select-value">

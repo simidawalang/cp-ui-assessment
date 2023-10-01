@@ -5,6 +5,7 @@ import { FiUserX, FiUserCheck } from "react-icons/fi";
 import { BiUserVoice } from "react-icons/bi";
 import { CiMail } from "react-icons/ci";
 import { GoChevronDown } from "react-icons/go";
+import { RxDividerVertical } from "react-icons/rx";
 
 const Header = () => {
   const [showOptions, setShowOptions] = useState(false);
@@ -52,6 +53,7 @@ const Header = () => {
             <li className="header-icon__item">
               <CiMail size={18} color="#0B0B0B" />
             </li>
+            <RxDividerVertical color="#eee" width={0.5}/>
             <li>
               <button className="header-btn">
                 <span className="btn-text">Move To Video Interview I</span>

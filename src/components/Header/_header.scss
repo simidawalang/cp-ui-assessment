@@ -21,7 +21,8 @@
   & .header-icons {
     list-style: none;
     display: flex;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   & .header-icon__item {
