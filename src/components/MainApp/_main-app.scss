@@ -1,14 +1,48 @@
 .main-app__body {
-    display: grid;
-    grid-template-columns: 35% 65%;
+  display: grid;
+  grid-template-columns: 35% 62%;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  & .candidates {
+    border-radius: 1rem;
+    padding: 1rem;
+    background: #fff;
+  }
+
+  & .filter-categories {
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  & .selected-filters {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid #f2f2f2;
+    & .heading {
+        font-weight: 500;
+    }
+  }
+  & .category {
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .category-name {
+    display: flex;
+    align-items: center;
     gap: 1rem;
-    padding: 1.5rem;
-    & .filters, .candidates {
-        background: #fff;
+  }
+
+  & .category {
+    &:not(:last-child) {
+      border-bottom: 1px solid #f2f2f2;
     }
-    .candidates {
-        border-radius: 1rem;
-        padding: 1rem;
-    }
-    
+  }
+  & .note {
+    transform: rotate(180deg);
+  }
 }

@@ -3,8 +3,12 @@
   border: 1px solid #f3f3f3;
   background: #fff;
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   input {
     border: none;
+    flex: 1 1 0;
 
     &:focus {
       outline: none;

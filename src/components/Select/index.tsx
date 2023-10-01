@@ -1,4 +1,4 @@
-import { Dispatch, MouseEventHandler, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { FaAngleDown } from "react-icons/fa";
 
 const Select = ({
@@ -6,14 +6,12 @@ const Select = ({
   setValue,
   options,
   showOptions,
-  className,
   setShowOptions,
 }: {
   value: string;
   setValue: Dispatch<SetStateAction<string>>;
   options: any[];
   showOptions: boolean;
-  className?: string;
   setShowOptions: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (

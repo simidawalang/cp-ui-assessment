@@ -2,25 +2,24 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { candidates } from "../../dummy-data/candidates";
 import CandidateCard from "./CandidateCard";
 import Input from "../Input";
+import { GrNotes } from "react-icons/gr";
+import { GoChevronDown } from "react-icons/go";
 
 const MainApp = () => {
   const [filteredCandidates, setFilteredCandidates] = useState(candidates);
   const [searchValue, setSearchValue] = useState("");
 
+  const filterCategories = [
+    "Personal Information",
+    "Education",
+    "Work Experience",
+    "Activity Filter",
+    "Advanced Filter",
+  ];
+
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
-
-  // id: 6,
-  // name: "Aaliyah Sanderson",
-  // location: "Riyadh, Saudi Arabia",
-  // education: "Bachelor - Cambridge University (2023 - 2023)",
-  // hashtags: ["#top_candidate", "#top_candidate"],
-  // city: "New York",
-  // department: "Marketing",
-  // residence: "London",
-  // viewsCount: 5,
-  // programCount: 5,
 
   useEffect(() => {
     if (searchValue === "") {
@@ -38,13 +37,27 @@ const MainApp = () => {
   return (
     <div className="main-app__body">
       <div className="filters">
-        Filters
         <Input
           type="search"
           placeholder="Search by name, edu, exp or #tag"
           value={searchValue}
           onChange={handleSearch}
         />
+        <div className="filter-categories">
+          <div className="selected-filters">
+            <span className="heading">Filters</span>
+            <span>0 selected</span>
+          </div>
+          {filterCategories.map((c, i) => (
+            <div className="category" key={i}>
+              <div className="category-name">
+                <GrNotes className="note" />
+                {c}
+              </div>
+              <GoChevronDown color="#1D4ED8" />
+            </div>
+          ))}
+        </div>
       </div>
       <div className="candidates">
         candidates

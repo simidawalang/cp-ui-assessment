@@ -1,6 +1,8 @@
 .header {
   padding: 1.5rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 35% 62%;
+  gap: 1.5rem;
   & .heading-text {
     color: #1d4ed8;
     font-size: 20px;
@@ -8,7 +10,39 @@
     margin-bottom: 1rem;
   }
 
+  & .header-content {
+    display: flex;
+    justify-content: space-between;
+  }
   & .city {
     font-size: 0.75rem;
+  }
+
+  & .header-icons {
+    list-style: none;
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  & .header-icon__item {
+    border-radius: 8px;
+    border: 0.5px solid #ececec;
+    background-color: #fff;
+    padding: 0.5rem 0.75rem;
+  }
+
+  & .header-btn {
+    color: #fff;
+    background: #1D5ECD;
+    border-radius: 8px;
+    border: none;
+    & .btn-text {
+      padding: 0.75rem;
+      display: inline-block;
+      border-right: 1px solid #fff;
+    }
+    & .btn-icon {
+      padding: 0.5rem 0.75rem;
+    }
   }
 }
